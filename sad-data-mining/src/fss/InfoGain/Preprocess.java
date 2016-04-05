@@ -1,9 +1,10 @@
 package fss.InfoGain;
 
+import weka.attributeSelection.InfoGainAttributeEval;
+import weka.attributeSelection.Ranker;
 import weka.core.Instances;
 import weka.filters.Filter;
-import weka.filters.unsupervised.attribute.StringToWordVector;
-import weka.filters.unsupervised.instance.SparseToNonSparse;
+import weka.filters.supervised.attribute.AttributeSelection;
 
 public class Preprocess {
 
@@ -23,16 +24,22 @@ public class Preprocess {
 	public Instances filtrar(Instances data) throws Exception{
 		Instances newData;
 		
-		// Filtro StringToWordVector
-		StringToWordVector filterSTWV = new StringToWordVector();
-		filterSTWV.setAttributeNamePrefix("_bg");		// bag of words ;)
-		filterSTWV.setLowerCaseTokens(true);	// no distinguir entre palabras mayusculas y minúsculas
-		filterSTWV.setOutputWordCounts(true);	// indicar el número de veces que aparece la palabra en el mensaje
+		// Filtro Feature Subset Selection
+		AttributeSelection filterAtt = new AttributeSelection();
+
+		// Attribute Evaluator: Info Gain Attribute
+		filterAtt.setEvaluator(new InfoGainAttributeEval());
+		
+		// Search Method: Ranker
+		Ranker r = new Ranker();
+		r.setNumToSelect(-1);
+		r.setThreshold(0.000848);
+		filterAtt.setSearch(r);
 		
 		// Aplicar filtro
-		filterSTWV.setInputFormat(data);
-		newData = Filter.useFilter(data, filterSTWV);
-		
+		filterAtt.setInputFormat(data);
+		newData = Filter.useFilter(data, filterAtt);
+			
 		return newData;
 	}
 }
