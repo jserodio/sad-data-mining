@@ -15,7 +15,7 @@ public class Main {
     	
     	try {
     		String path = args[0]; // ruta fichero
-    		String path2 = args[1]; // ruta fichero guardar
+    		//String path2 = args[1]; // ruta fichero guardar
     		
     		
 	    	data = Data.getData().cargar(path);

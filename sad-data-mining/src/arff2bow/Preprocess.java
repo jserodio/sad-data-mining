@@ -1,18 +1,9 @@
 package arff2bow;
 
-import java.io.File;
-import java.io.IOException;
-
-import weka.attributeSelection.InfoGainAttributeEval;
-import weka.attributeSelection.Ranker;
 import weka.core.Instances;
-import weka.core.converters.ArffSaver;
 import weka.filters.Filter;
-import weka.filters.supervised.attribute.AttributeSelection;
-import weka.filters.unsupervised.attribute.InterquartileRange;
-import weka.filters.unsupervised.attribute.Remove;
 import weka.filters.unsupervised.attribute.StringToWordVector;
-import weka.filters.unsupervised.instance.RemoveWithValues;
+import weka.filters.unsupervised.instance.SparseToNonSparse;
 
 public class Preprocess {
 
@@ -41,6 +32,11 @@ public class Preprocess {
 		// Aplicar filtro
 		filterSTWV.setInputFormat(data);
 		newData = Filter.useFilter(data, filterSTWV);
+		
+		// Filtro SparseToNonSparse
+		SparseToNonSparse filter2NonSparse = new SparseToNonSparse();
+		filter2NonSparse.setInputFormat(newData);
+		newData = Filter.useFilter(newData, filter2NonSparse);
 		
 		return newData;
 	}
