@@ -25,7 +25,7 @@ public class Preprocess {
 		
 		// Filtro StringToWordVector
 		StringToWordVector filterSTWV = new StringToWordVector();
-		filterSTWV.setAttributeNamePrefix("_bg");		// bag of words ;)
+		filterSTWV.setAttributeNamePrefix("bg_");		// bag of words ;)
 		filterSTWV.setLowerCaseTokens(true);	// no distinguir entre palabras mayusculas y minúsculas
 		filterSTWV.setOutputWordCounts(true);	// indicar el número de veces que aparece la palabra en el mensaje
 		
