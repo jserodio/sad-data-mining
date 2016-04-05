@@ -1,11 +1,13 @@
 package arff2bow;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
 
 import weka.core.Instances;
+import weka.core.converters.ArffSaver;
 
 public class Data {
 	
@@ -20,7 +22,7 @@ public class Data {
 		return miData;
 	}
 
-	public Instances cargar(String path){
+	public Instances loadFile(String path){
 		FileReader fi=null;
 
 		try {
@@ -56,6 +58,12 @@ public class Data {
 		return data;
 	}
 	
-	
+	public void saveFile(Instances dataSet) throws IOException{
+		 ArffSaver saver = new ArffSaver();
+		 saver.setInstances(dataSet);
+		 saver.setFile(new File("assets/spamTrainBOW.arff"));
+		 // saver.setDestination(new File("./data/test.arff"));   // **not** necessary in 3.5.4 and later
+		 saver.writeBatch();
+	}
 	
 }

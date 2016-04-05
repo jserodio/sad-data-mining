@@ -11,11 +11,12 @@ public class Main {
 	   	Instances dataBow;
 	   	
 		String path = args[0];
-		data = Data.getData().cargar(path);
+		data = Data.getData().loadFile(path);
 		System.out.println("The file " + path + " was loaded.");	
 		
 		dataBow = Preprocess.getPreprocess().filtrar(data);
-		
+
+		Data.getData().saveFile(dataBow);
 
    }
 }

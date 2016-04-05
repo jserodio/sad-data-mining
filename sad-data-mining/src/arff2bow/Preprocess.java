@@ -39,17 +39,9 @@ public class Preprocess {
 		filterSTWV.setOutputWordCounts(true);	// indicar el número de veces que aparece la palabra en el mensaje
 		
 		// Aplicar filtro
-		// filterSTWV.setInputFormat(data);
+		filterSTWV.setInputFormat(data);
 		newData = Filter.useFilter(data, filterSTWV);
 		
 		return newData;
-	}
-
-	public void saveFile(Instances dataSet) throws IOException{
-			 ArffSaver saver = new ArffSaver();
-			 saver.setInstances(dataSet);
-			 saver.setFile(new File("assets/test.arff"));
-			 // saver.setDestination(new File("./data/test.arff"));   // **not** necessary in 3.5.4 and later
-			 saver.writeBatch();
 	}
 }
