@@ -1,12 +1,10 @@
 package examen_jserodio;
 
-import weka.attributeSelection.BestFirst;
-import weka.attributeSelection.CfsSubsetEval;
-import weka.attributeSelection.InfoGainAttributeEval;
-import weka.attributeSelection.Ranker;
+//import weka.attributeSelection.InfoGainAttributeEval;
+//import weka.attributeSelection.Ranker;
 import weka.core.Instances;
 import weka.filters.Filter;
-import weka.filters.supervised.attribute.AttributeSelection;
+//import weka.filters.supervised.attribute.AttributeSelection;
 import weka.filters.unsupervised.attribute.InterquartileRange;
 import weka.filters.unsupervised.attribute.Remove;
 import weka.filters.unsupervised.instance.RemoveWithValues;
@@ -56,13 +54,13 @@ public class Preprocess {
 		newData = Filter.useFilter(newData, filterR);
 		
 		// Seleccion atributos
-		AttributeSelection filter = new AttributeSelection();
-		InfoGainAttributeEval eval = new InfoGainAttributeEval();
-		Ranker search = new Ranker();
-		search.setNumToSelect(10);
-		filter.setSearch(search);
-		filter.setInputFormat(newData);
-		newData = Filter.useFilter(newData, filter);
+//		AttributeSelection filter = new AttributeSelection();
+//		InfoGainAttributeEval eval = new InfoGainAttributeEval();
+//		Ranker search = new Ranker();
+//		search.setNumToSelect(10);
+//		filter.setSearch(search);
+//		filter.setInputFormat(newData);
+//		newData = Filter.useFilter(newData, filter);
 		
 		return newData;
 	}

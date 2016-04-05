@@ -3,13 +3,8 @@ package examen_jserodio;
 import java.util.Random;
 
 import weka.classifiers.Evaluation;
-import weka.classifiers.lazy.IBk;
 import weka.classifiers.trees.RandomForest;
-import weka.core.ChebyshevDistance;
-import weka.core.EuclideanDistance;
 import weka.core.Instances;
-import weka.core.ManhattanDistance;
-import weka.core.SelectedTag;
 
 public class Classifier {
 	

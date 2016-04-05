@@ -10,13 +10,14 @@ public class Main {
 	   	Instances data; 	
 	   	Instances dataBow;
 	   	
-		String path = args[0];
-		data = Data.getData().loadFile(path);
-		System.out.println("The file " + path + " was loaded.");	
+		String loadPath = args[0]; // ruta para cargar fichero
+		String savePath = args[1]; // ruta guardar fichero
+		data = Data.getData().loadFile(loadPath);
+		System.out.println("The file '" + savePath + "' was loaded.");	
 		
 		dataBow = Preprocess.getPreprocess().filtrar(data);
 
-		Data.getData().saveFile(dataBow);
+		Data.getData().saveFile(dataBow, savePath);
 
    }
 }
