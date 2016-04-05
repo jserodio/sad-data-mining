@@ -13,7 +13,7 @@ public class Main {
 		String loadPath = args[0]; // ruta para cargar fichero
 		String savePath = args[1]; // ruta guardar fichero
 		data = Data.getData().loadFile(loadPath);
-		System.out.println("The file '" + savePath + "' was loaded.");	
+		System.out.println("The file '" + loadPath + "' was loaded.");	
 		
 		dataBow = Preprocess.getPreprocess().filtrar(data);
 
