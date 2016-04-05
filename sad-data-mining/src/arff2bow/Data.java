@@ -62,7 +62,7 @@ public class Data {
 		 saver.setInstances(dataSet);
 		 saver.setFile(new File(savePath));
 		 saver.writeBatch();
-		 System.out.println("The file '" + savePath + "' was loaded.");	
+		 System.out.println("The file '" + savePath + "' was saved.");	
 	}
 	
 }
