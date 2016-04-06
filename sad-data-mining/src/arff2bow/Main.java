@@ -7,6 +7,9 @@ public class Main {
 	
    public static void main(String[] args) throws Exception {
 
+	    // Run Configurations -> program arguments
+	    // exportedJar/assets/spamTrain.arff exportedJar/assets/spamTrainBOW.arff
+	   
 	   	Instances data; 	
 	   	Instances dataBow;
 	   	
