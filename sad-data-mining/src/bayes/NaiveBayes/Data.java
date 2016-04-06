@@ -20,7 +20,7 @@ public class Data {
 		return miData;
 	}
 
-	public Instances cargar(String path){
+	public Instances loadFile(String path){
 		FileReader fi=null;
 
 		try {
@@ -53,6 +53,8 @@ public class Data {
 			data.setClassIndex(data.numAttributes()-1);
 		}
 
+		System.out.println("The file '" + path + "' was loaded.");	
+		
 		return data;
 	}
 	
