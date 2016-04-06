@@ -7,15 +7,18 @@ public class Main {
 	
    public static void main(String[] args) throws Exception {
 
-	   	Instances data; 	
+	   	Instances train; 
+	   	Instances test;
 
-		String path = args[0];
-		data = Data.getData().cargar(path);
-		System.out.println("The file " + path + " was loaded.");	
+		String pathTrain = args[0];
+		String pathTest = args[1];
+		train = Data.getData().cargar(pathTrain);
+		test = Data.getData().cargar(pathTest);
+		System.out.println("The files " + pathTrain + " and " + pathTest + " were loaded.");	
 		
 		Classifier c = new Classifier();
 		
-		c.naiveBayes(data);
+		c.naiveBayes(train,test);
    }
 }
 
