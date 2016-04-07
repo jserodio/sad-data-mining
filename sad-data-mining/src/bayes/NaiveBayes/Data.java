@@ -50,7 +50,7 @@ public class Data {
 		if (data.attribute("class") != null){
 			data.setClassIndex(data.attribute("class").index());
 		} else {
-			data.setClassIndex(data.numAttributes()-1);
+//			data.setClassIndex(data.numAttributes()-1);
 		}
 
 		System.out.println("The file '" + path + "' was loaded.");	
