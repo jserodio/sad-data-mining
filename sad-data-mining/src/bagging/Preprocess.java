@@ -1,4 +1,4 @@
-package bayes.NaiveBayes;
+package bagging;
 
 import weka.attributeSelection.BestFirst;
 import weka.attributeSelection.CfsSubsetEval;

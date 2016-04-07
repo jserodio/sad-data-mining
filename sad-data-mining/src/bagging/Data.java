@@ -1,4 +1,4 @@
-package bayes.NaiveBayes;
+package bagging;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
