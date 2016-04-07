@@ -32,7 +32,7 @@ public class Classifier {
 		classifier.buildClassifier(train);
 		// options for bagging
 		classifier.setClassifier(new NaiveBayes());
-		classifier.setNumIterations(2);
+		classifier.setNumIterations(it);
 			
 		evaluator.evaluateModel(classifier, dev);
 				
