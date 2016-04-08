@@ -8,7 +8,7 @@ public class Main {
    public static void main(String[] args) throws Exception {
 	   
 	   // Run Configurations -> program arguments
-	   // exportedJar/assets/spamTrainBOW.arff exportedJar/assets/spamTrainBOW_FSS_TFIDF.arff
+	   // exportedJar/assets/spamTrain.arff.Bow.arff exportedJar/assets/spamDev.arff.Bow.arff  
 	   
 	   	Instances data; 	
 	   	Instances newData;

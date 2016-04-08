@@ -80,9 +80,9 @@ public class Main {
 			i++;
 		}
 		
-		Data.getData().saveFile(dataBow, loadPathTrain+".Bow.arff");
-		Data.getData().saveFile(dataBow, loadPathTest+".Bow.arff");
-		Data.getData().saveFile(dataBow, loadPathDev+".Bow.arff");
+		Data.getData().saveFile(trainBow, loadPathTrain+".Bow.arff");
+		Data.getData().saveFile(testBow, loadPathTest+".Bow.arff");
+		Data.getData().saveFile(devBow, loadPathDev+".Bow.arff");
    }
 }
 
