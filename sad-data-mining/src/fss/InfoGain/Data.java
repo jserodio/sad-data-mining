@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
+
 import weka.core.Instances;
 import weka.core.converters.ArffSaver;
 
@@ -54,6 +55,8 @@ public class Data {
 			data.setClassIndex(data.numAttributes()-1);
 		}
 
+		System.out.println("The file '" + path + "' was loaded.");	
+		
 		return data;
 	}
 	

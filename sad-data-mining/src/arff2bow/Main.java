@@ -21,12 +21,11 @@ public class Main {
 	   	Instances testBow = null;
 	   	Instances devBow = null;
 	   	
-		String loadPathTrain = args[0]; // ruta para cargar fichero
-		String loadPathTest = args[1]; // ruta guardar fichero
-		String loadPathDev = args[2]; // ruta guardar fichero
+		String loadPathTrain = args[0]; // ruta para cargar fichero train
+		String loadPathTest = args[1]; // ruta para cargar fichero test
+		String loadPathDev = args[2]; // ruta para cargar fichero dev
 		
 		train = Data.getData().loadFile(loadPathTrain);
-		System.out.println("Train instance number: " + train.numInstances());
 		test = Data.getData().loadFile(loadPathTest);
 		dev = Data.getData().loadFile(loadPathDev);
 		
