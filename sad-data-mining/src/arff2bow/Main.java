@@ -17,9 +17,9 @@ public class Main {
 	   	Instances test;
 	   	Instances dev;
 	   	
-	   	Instances trainBow = null;
-	   	Instances testBow = null;
-	   	Instances devBow = null;
+	   	Instances trainBow;
+	   	Instances testBow;
+	   	Instances devBow;
 	   	
 		String loadPathTrain = args[0]; // ruta para cargar fichero train
 		String loadPathTest = args[1]; // ruta para cargar fichero test
@@ -51,13 +51,13 @@ public class Main {
 		System.out.println("Test instance number: " + test.numInstances());
 		System.out.println("Dev instance number: " + dev.numInstances());
 		
-		trainBow = new Instances(train,1);
+		trainBow = new Instances(dataBow,1);
 		trainBow.delete();
 		
-		testBow = new Instances(test,1);
+		testBow = new Instances(dataBow,1);
 		testBow.delete();
 		
-		devBow = new Instances(dev,1);
+		devBow = new Instances(dataBow,1);
 		devBow.delete();
 		
 		int i=0;
