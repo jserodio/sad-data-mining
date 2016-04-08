@@ -1,0 +1,93 @@
+The file 'exportedJar/assets/spamTrain.arff.Bow.arff' was loaded.
+The file 'exportedJar/assets/spamDev.arff.Bow.arff' was loaded.
+
+
+Starting bagging for NaiveBayes
+
+Resultados del barrido de parametros...
+Optimal num iterations for bagging is:	1
+Maximum F-measure for minority class:	0.03260869565217391
+
+Correctly Classified Instances         922               83.8182 %
+Incorrectly Classified Instances       178               16.1818 %
+Kappa statistic                          0.0109
+Mean absolute error                      0.1737
+Root mean squared error                  0.3934
+Relative absolute error                 70.4547 %
+Root relative squared error            108.3395 %
+Total Number of Instances             1100     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.989     0.982      0.845     0.989     0.912      0.493    ham
+                 0.018     0.011      0.231     0.018     0.033      0.493    spam
+Weighted Avg.    0.838     0.831      0.75      0.838     0.775      0.493
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 919  10 |   a = ham
+ 168   3 |   b = spam
+
+
+
+Starting bagging for ZeroR
+
+Resultados del barrido de parametros...
+Optimal num iterations for bagging is:	1
+Maximum F-measure for minority class:	0.03260869565217391
+
+Correctly Classified Instances         922               83.8182 %
+Incorrectly Classified Instances       178               16.1818 %
+Kappa statistic                          0.0109
+Mean absolute error                      0.1737
+Root mean squared error                  0.3934
+Relative absolute error                 70.4547 %
+Root relative squared error            108.3395 %
+Total Number of Instances             1100     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.989     0.982      0.845     0.989     0.912      0.493    ham
+                 0.018     0.011      0.231     0.018     0.033      0.493    spam
+Weighted Avg.    0.838     0.831      0.75      0.838     0.775      0.493
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 919  10 |   a = ham
+ 168   3 |   b = spam
+
+
+
+Starting bagging for OneR
+
+Resultados del barrido de parametros...
+Optimal num iterations for bagging is:	1
+Maximum F-measure for minority class:	0.03260869565217391
+
+Correctly Classified Instances         922               83.8182 %
+Incorrectly Classified Instances       178               16.1818 %
+Kappa statistic                          0.0109
+Mean absolute error                      0.1737
+Root mean squared error                  0.3934
+Relative absolute error                 70.4547 %
+Root relative squared error            108.3395 %
+Total Number of Instances             1100     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.989     0.982      0.845     0.989     0.912      0.493    ham
+                 0.018     0.011      0.231     0.018     0.033      0.493    spam
+Weighted Avg.    0.838     0.831      0.75      0.838     0.775      0.493
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 919  10 |   a = ham
+ 168   3 |   b = spam
+
+End.
