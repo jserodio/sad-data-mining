@@ -54,6 +54,8 @@ public class Data {
 			data.setClassIndex(data.numAttributes()-1);
 		}
 
+		System.out.println("The file '" + path + "' was loaded.");	
+		
 		return data;
 	}
 	
