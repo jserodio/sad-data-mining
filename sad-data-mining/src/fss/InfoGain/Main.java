@@ -15,8 +15,8 @@ public class Main {
 	   	Instances train;
 	   	Instances dev;
 	   	
-	   	Instances trainGain = null;
-	   	Instances devGain = null;
+	   	Instances trainGain;
+	   	Instances devGain;
 	   	
 	   	String loadPathTrain = args[0]; // ruta para cargar fichero train
 		String loadPathDev = args[1]; // ruta para cargar fichero dev

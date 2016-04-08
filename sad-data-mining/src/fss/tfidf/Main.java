@@ -1,5 +1,7 @@
 package fss.tfidf;
 
+import arff2bow.Data;
+import fss.InfoGain.Preprocess;
 import weka.core.Instances;
 
 
@@ -10,17 +12,29 @@ public class Main {
 	   // Run Configurations -> program arguments
 	   // exportedJar/assets/spamTrain.arff.Bow.arff exportedJar/assets/spamDev.arff.Bow.arff  
 	   
-	   	Instances data; 	
-	   	Instances newData;
+		Instances train;
+	   	Instances dev;
 	   	
-		String loadPath = args[0]; // ruta para cargar fichero
-		String savePath = args[1]; // ruta guardar fichero
+	   	Instances trainTfIdf;
+	   	Instances devTfIdf;
+	   	
+	   	String loadPathTrain = args[0]; // ruta para cargar fichero train
+		String loadPathDev = args[1]; // ruta para cargar fichero dev
 		
-		data = Data.getData().loadFile(loadPath);
+		train = Data.getData().loadFile(loadPathTrain);
+		dev = Data.getData().loadFile(loadPathDev);
 		
-		newData = Preprocess.getPreprocess().filtrar(data);
+		
+		trainTfIdf = Preprocess.getPreprocess().filtrar(train);
+		devTfIdf = Preprocess.getPreprocess().filtrar(dev);
+		
+		System.out.println("Train instance number: " + train.numInstances());
+		System.out.println("Dev instance number: " + dev.numInstances());
+		System.out.println("TrainTFIDF instance number: " + trainTfIdf.numInstances());
+		System.out.println("DevTFIDF instance number: " + devTfIdf.numInstances());
 
-		Data.getData().saveFile(newData, savePath);
+		Data.getData().saveFile(trainTfIdf, loadPathTrain+".FSS_TFIDF.arff");
+		Data.getData().saveFile(devTfIdf, loadPathDev+".FSS_TFIDF.arff");
    }
 }
 
